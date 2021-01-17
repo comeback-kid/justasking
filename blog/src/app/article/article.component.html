@@ -1,0 +1,20 @@
+<div class="breadcrumbs">
+  <span class="breadcrumb" routerLink="/">Home</span>
+  <span class="separator"> > </span>
+  <span class="current">{{article.Title}}</span>
+</div>
+<div class="article">
+  <div [style.background-image]="articleBanner" class="article-cover">
+  </div>
+  <div class="details">
+    <h1 class="title">{{article.Title}}</h1>
+    <div class="author-date">
+        <span class="author">by {{article.Author}}</span>
+        <span class="date">{{article.Date}}</span>
+      </div>
+  </div>
+  <hr class="content-divider">
+  <div class="article-content">
+    <p class="content" [innerHTML]="article.Text"></p>
+  </div>
+</div>

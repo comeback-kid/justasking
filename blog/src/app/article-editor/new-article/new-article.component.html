@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Go on, get fancy with your words</h1>
+  <br>
+  <div 
+    [froalaEditor]="editorOptions" 
+    [(froalaModel)]="editorContent">
+  </div>
+  <br>
+  {{editorContent}}
+  <br>  
+  <div class="actions">
+    <div class="btn btn-default" routerLink="/">Not now</div>
+    <div class="btn btn-primary">Save post</div>
+    <div class="btn btn-accent">Publish post</div>
+  </div>
+</div>

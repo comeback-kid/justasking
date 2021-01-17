@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "justasking.io",
+    "description": "Enhance your events with unlimited real time polling. Live Q&A, Wordclouds, Polls for your Meetings and Events.",
+    "version": "1.0.0.1",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "app": {
+        "urls": [
+            "https://justasking.io/getstarted",
+            "https://justasking.io/getstarted/pricing"
+        ],
+        "launch": {
+            "web_url": "https://justasking.io"
+        }
+    }
+}

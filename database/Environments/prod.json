@@ -1,0 +1,23 @@
+{
+    "TwilioTestAccountSid" : "AC92bb5608cb0d708e05f393996533601a",
+    "TwilioLiveAccountSid" : "AC04b6b6fa8c0d1b21bceba60f27ea4ef0",
+    "TwilioTestAuthToken" : "299eff8d4458eb748dc4e42f27151002",
+    "TwilioLiveAuthToken" : "663a65e07869d6ac38e5f0416d3a8d2a",
+    "TwilioSmsUrl" : "https://justasking-api-166720.appspot.com/sms/receive",
+    "TwilioTestModeFlag" : "true",
+    "RealTimeHubBaseUrl": "https://justasking.live",
+    "JustAskingWebBaseUrl": "http://justasking.io",
+    "StripeSecretKey" : "sk_live_4hvxSrzrkBW0H9HSxivr1B02",
+    "WelcomeEmailSubject": "Welcome to Justasking.io",
+    "WelcomeEmailBcc": "contact@justasking.io",
+    "ErrorEmailSubject": "Error in {DomainName}",
+    "UpgradeEmailSubject" : "JustAsking.io Plan Upgrade",
+    "InvitationEmailSubject" : "Invitation to join JustAsking.io",
+    "ExpirationEmailSubject" : "JustAsking.io Plan Expiration",
+    "UpgradeEmailBcc" : "contact@justasking.io",
+    "ExpirationBcc" : "contact@justasking.io",
+    "PasswordResetRequestSubject" : "JustAsking.io Password Reset Request",
+    "PasswordResetConfirmationSubject" : "JustAsking.io Password Reset Confirmation",
+    "SupportIssueEmailCc": "contact@justasking.io",
+    "FeatureRequestThankYouEmailCc": "contact@justasking.io"
+}

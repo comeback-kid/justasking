@@ -1,0 +1,12 @@
+<div  
+  class="sidenav"
+  [class.open]='sidenavService.opened'>
+  <a class="closebtn" (click)="sidenavService.closeSidenav()">&times;</a>
+  <a target="_blank" href="http://justasking.io/">justasking.io</a>
+  <hr>
+  <a routerLink="/">BLOG</a>
+  <a target="_blank" href="http://justasking.io/">GET STARTED</a>
+  <a target="_blank" href="http://justasking.io/getstarted/pricing">PRICING</a>
+  <a target="_blank" href="http://justasking.io/login">LOGIN</a>
+</div>
+<div *ngIf="sidenavService.opened" class="overlay" (click)="sidenavService.closeSidenav()"></div>
