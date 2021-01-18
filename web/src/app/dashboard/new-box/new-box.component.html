@@ -22,6 +22,7 @@
             </mat-form-field>
             <br/>
             <div class="description">
+              <!-- <h1>{{ newBox.BaseBox.BoxType }}</h1> -->
               <p *ngIf="newBox.BaseBox.BoxType == 'Question Poll'">
                 Challenge your participants to ask you questions.
                 <br> Participants may upvote or downvote other's questions.
@@ -30,7 +31,7 @@
                 Ask one or more open ended questions and choose to allow participants to answer all of them at once or in partitions.
               </p>
               <p *ngIf="newBox.BaseBox.BoxType == 'Votes Poll'">
-                Create a set of options from which your participants can vote on.
+                Create multiple sets of options from which your participants can vote on.
               </p>
               <p *ngIf="newBox.BaseBox.BoxType == 'Word Cloud'">
                 Watch your Word Cloud come to life as your participants respond to a question.

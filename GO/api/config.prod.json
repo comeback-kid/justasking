@@ -2,10 +2,10 @@
         "AppSettings" : {
                 "AllowOrigin": "*",
                 "DatabaseType" : "mysql",
-                "ConnectionString" : "produser:9zKwYC5KDjkRbBeP@unix(/cloudsql/justasking-db:us-east1:justasking-db)/justasking?charset=utf8&parseTime=True&loc=Local",
+                "ConnectionString" : "",
                 "TokenExpirationInDays" : "30",
 		"NoReplyEmail" : "noreply@justasking.io",
-		"NoReplyPassword" : "9t4PhkjpS5DyKQxahqhanvSGkXY9P6Cv"
+		"NoReplyPassword" : ""
         },
         "Email": {
                 "Username": "",

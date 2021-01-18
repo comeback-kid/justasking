@@ -24,46 +24,45 @@ export class PresentationTopnavComponent implements OnInit {
 
   @Input('box') baseBox: BaseBoxModel;
   @Input('hidePhone') hidePhone: boolean;
-  boxUrl: string;
-  downloadingScreenshot: boolean;
+  boxUrl:string;
 
   constructor(
     public notificationsService: NotificationsService,
     public userService: UserService,
     private router: Router
   ) {
-    this.downloadingScreenshot = false;
   }
 
-  download(code) {
-    let downloadIcon = document.getElementById("download");
-    downloadIcon.style.display = "none";
-    html2canvas(document.body).then(function (canvas) {
-      var newImg = document.createElement("img");
-      newImg.src = canvas.toDataURL();
-      var newAnchor = document.createElement("a");
-      newAnchor.href = newImg.src;
-      newAnchor.download = `${code}_screenshot.png`;
-      newAnchor.id = "screenshot";
-      document.body.appendChild(newAnchor);
-      newAnchor.click();
-      downloadIcon.style.display = "inline-block";
-  });
+  download(code){
+    setTimeout(function(){
+      html2canvas(document.body, {
+          onrendered: function(canvas) {
+              var newImg = document.createElement("img");
+              newImg.src = canvas.toDataURL();
+              var newAnchor = document.createElement("a");
+              newAnchor.href = newImg.src;
+              newAnchor.download = `${code}_screenshot.png`;
+              newAnchor.id="screenshot";
+              document.body.appendChild(newAnchor);
+              newAnchor.click();
+          }
+      });
+    },200);
   }
 
-  copyToClipboard() {
+  copyToClipboard(){
     this.notificationsService.openSnackBarDefault("Link copied to clipboard!");
   }
 
   ngOnInit() {
     this.boxUrl = document.location.href;
     let userIsLoggedIn = this.userService.userIsLoggedIn();
-    if (userIsLoggedIn) {
+    if(userIsLoggedIn){
       this.userService.getUser()
-        .catch(error => {
-          return Observable.throw(error);
+        .catch(error=>{ 
+            return Observable.throw(error);
         }).subscribe();
-    }
+    } 
   }
 
 }
